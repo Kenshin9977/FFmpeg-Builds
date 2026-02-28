@@ -29,7 +29,7 @@ ffbuild_dockerbuild() {
         --enable-static
     )
 
-    if [[ $TARGET == linux* ]]; then
+    if [[ $TARGET == linux* || $TARGET == android* ]]; then
         myconf+=(
             --sysconfdir=/etc
             --localstatedir=/var
