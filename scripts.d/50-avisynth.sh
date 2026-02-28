@@ -4,6 +4,7 @@ SCRIPT_REPO="https://github.com/AviSynth/AviSynthPlus.git"
 SCRIPT_COMMIT="8f2a77887874a9c78fc3524b1feafbb69011bfc2"
 
 ffbuild_enabled() {
+    [[ $TARGET == android* ]] && return -1
     [[ $VARIANT == lgpl* ]] && return -1
     return 0
 }
