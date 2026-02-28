@@ -46,6 +46,10 @@ ffbuild_dockerbuild() {
             --target=arm64-linux-gcc
         )
         export CROSS="$FFBUILD_CROSS_PREFIX"
+    elif [[ $TARGET == androidarm64 ]]; then
+        myconf+=(
+            --target=arm64-android-gcc
+        )
     else
         echo "Unknown target"
         return -1
