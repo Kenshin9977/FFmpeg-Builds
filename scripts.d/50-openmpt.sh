@@ -11,6 +11,7 @@ ffbuild_depends() {
 }
 
 ffbuild_enabled() {
+    [[ $TARGET == android* ]] && return -1
     [[ $TARGET == winarm64 ]] && return -1
     return 0
 }

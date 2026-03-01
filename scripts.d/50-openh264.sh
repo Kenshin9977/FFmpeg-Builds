@@ -44,6 +44,11 @@ ffbuild_dockerbuild() {
             OS=linux
             ARCH=aarch64
         )
+    elif [[ $TARGET == androidarm64 ]]; then
+        myconf+=(
+            OS=android
+            ARCH=aarch64
+        )
     else
         echo "Unknown target"
         return -1
