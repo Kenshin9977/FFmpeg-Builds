@@ -15,7 +15,12 @@ ENV PATH="${NDK_TOOLCHAIN}/bin:${PATH}"
 
 RUN mkdir /opt/ffbuild
 
-ENV FFBUILD_TOOLCHAIN=aarch64-linux-android${ANDROID_API}
+ENV FFBUILD_TOOLCHAIN=aarch64-linux-android${ANDROID_API} \
+    FFBUILD_RUST_TARGET="aarch64-linux-android"
+
+RUN \
+    rustup target add "$FFBUILD_RUST_TARGET" && \
+    printf "[target.%s]\nlinker = \"%s\"\nar = \"llvm-ar\"\n" "$FFBUILD_RUST_TARGET" "${FFBUILD_TOOLCHAIN}-clang" > "$CARGO_HOME"/config.toml
 
 ADD toolchain.cmake /toolchain.cmake
 ADD cross.meson /cross.meson
