@@ -35,8 +35,8 @@ ENV FFBUILD_TARGET_FLAGS="--pkg-config=pkg-config --arch=aarch64 --target-os=and
     RANLIB="llvm-ranlib" \
     NM="llvm-nm" \
     STRIP="llvm-strip" \
-    CFLAGS="-I/opt/ffbuild/include -O2 -pipe -march=armv8-a -fPIC -DPIC -D_FORTIFY_SOURCE=2 -fstack-protector-strong -pthread" \
-    CXXFLAGS="-I/opt/ffbuild/include -O2 -pipe -march=armv8-a -fPIC -DPIC -D_FORTIFY_SOURCE=2 -fstack-protector-strong -pthread" \
+    CFLAGS="-I/opt/ffbuild/include -O2 -pipe -march=armv8-a -fPIC -DPIC -fstack-protector-strong -pthread" \
+    CXXFLAGS="-I/opt/ffbuild/include -O2 -pipe -march=armv8-a -fPIC -DPIC -fstack-protector-strong -pthread" \
     LDFLAGS="-L/opt/ffbuild/lib -O2 -pipe -march=armv8-a -fstack-protector-strong -Wl,-z,relro,-z,now -pthread -lm" \
     STAGE_CFLAGS="-fvisibility=hidden" \
     STAGE_CXXFLAGS="-fvisibility=hidden"

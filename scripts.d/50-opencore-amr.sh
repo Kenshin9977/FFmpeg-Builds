@@ -20,7 +20,7 @@ ffbuild_dockerbuild() {
         --disable-examples
     )
 
-    if [[ $TARGET == win* || $TARGET == linux* ]]; then
+    if [[ $TARGET == win* || $TARGET == linux* || $TARGET == android* ]]; then
         myconf+=(
             --host="$FFBUILD_TOOLCHAIN"
         )

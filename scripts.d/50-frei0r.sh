@@ -4,6 +4,7 @@ SCRIPT_REPO="https://github.com/dyne/frei0r.git"
 SCRIPT_COMMIT="74edaeb1b69081017f0c80dd4cebac15cf375e62"
 
 ffbuild_enabled() {
+    [[ $TARGET == android* ]] && return -1
     [[ $VARIANT == lgpl* ]] && return -1
     (( $(ffbuild_ffver) >= 500 )) || return -1
     return 0
