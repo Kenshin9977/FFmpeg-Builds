@@ -25,7 +25,11 @@ ffbuild_dockerbuild() {
         --prefix="$FFBUILD_PREFIX"
     )
 
-    if [[ $TARGET == win* || $TARGET == linux* || $TARGET == android* ]]; then
+    if [[ $TARGET == android* ]]; then
+        myconf+=(
+            --host="$FFBUILD_TOOLCHAIN"
+        )
+    elif [[ $TARGET == win* || $TARGET == linux* ]]; then
         myconf+=(
             --host="$FFBUILD_TOOLCHAIN"
             --cross-prefix="$FFBUILD_CROSS_PREFIX"
