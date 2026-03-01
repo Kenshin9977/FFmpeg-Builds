@@ -47,7 +47,7 @@ ffbuild_dockerbuild() {
     elif [[ $TARGET == androidarm64 ]]; then
         myconf+=(
             OS=android
-            ARCH=aarch64
+            ARCH=arm64
             NDKROOT="$ANDROID_NDK"
             NDKLEVEL="$ANDROID_API"
         )
