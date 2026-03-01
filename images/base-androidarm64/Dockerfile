@@ -13,6 +13,12 @@ ENV ANDROID_NDK=/opt/android-ndk-r27c \
 ENV NDK_TOOLCHAIN=${ANDROID_NDK}/toolchains/llvm/prebuilt/linux-x86_64
 ENV PATH="${NDK_TOOLCHAIN}/bin:${PATH}"
 
+# Android Bionic libc includes pthread/rt functions directly.
+# Create empty stub libraries so -lpthread/-lrt/-ldl link flags work.
+RUN for lib in pthread rt dl; do \
+        llvm-ar rcs ${NDK_TOOLCHAIN}/sysroot/usr/lib/aarch64-linux-android/${ANDROID_API}/lib${lib}.a; \
+    done
+
 RUN mkdir /opt/ffbuild
 
 ENV FFBUILD_TOOLCHAIN=aarch64-linux-android${ANDROID_API} \
