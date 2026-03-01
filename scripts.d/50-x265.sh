@@ -4,6 +4,7 @@ SCRIPT_REPO="https://bitbucket.org/multicoreware/x265_git.git"
 SCRIPT_COMMIT="afa0028dda3486bce8441473c6c7b99bec2f0961"
 
 ffbuild_enabled() {
+    [[ $TARGET == android* ]] && return -1
     [[ $VARIANT == lgpl* ]] && return -1
     return 0
 }
