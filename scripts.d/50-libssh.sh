@@ -10,6 +10,7 @@ ffbuild_depends() {
 }
 
 ffbuild_enabled() {
+    [[ $TARGET == android* ]] && return -1
     return 0
 }
 

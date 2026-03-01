@@ -44,7 +44,7 @@ ffbuild_dockerbuild() {
 
     if [[ $TARGET == win* ]]; then
         rm "$FFBUILD_DESTPREFIX"/{bin/libxvidcore.dll,lib/libxvidcore.dll.a}
-    elif [[ $TARGET == linux* ]]; then
+    elif [[ $TARGET == linux* || $TARGET == android* ]]; then
         rm "$FFBUILD_DESTPREFIX"/lib/libxvidcore.so*
     fi
 }

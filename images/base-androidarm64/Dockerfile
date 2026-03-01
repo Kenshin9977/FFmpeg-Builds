@@ -31,7 +31,7 @@ RUN \
 ADD toolchain.cmake /toolchain.cmake
 ADD cross.meson /cross.meson
 
-ENV FFBUILD_TARGET_FLAGS="--pkg-config=pkg-config --arch=aarch64 --target-os=android --enable-cross-compile --enable-mediacodec --enable-jni --cc=aarch64-linux-android${ANDROID_API}-clang --cxx=aarch64-linux-android${ANDROID_API}-clang++" \
+ENV FFBUILD_TARGET_FLAGS="--pkg-config=pkg-config --arch=aarch64 --target-os=android --enable-cross-compile --enable-mediacodec --enable-jni --cc=aarch64-linux-android${ANDROID_API}-clang --cxx=aarch64-linux-android${ANDROID_API}-clang++ --strip=llvm-strip" \
     FFBUILD_CROSS_PREFIX="aarch64-linux-android-" \
     FFBUILD_PREFIX=/opt/ffbuild \
     FFBUILD_DESTDIR=/opt/ffdest \
