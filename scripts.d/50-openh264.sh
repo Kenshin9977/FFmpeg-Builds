@@ -48,6 +48,8 @@ ffbuild_dockerbuild() {
         myconf+=(
             OS=android
             ARCH=aarch64
+            NDKROOT="$ANDROID_NDK"
+            NDKLEVEL="$ANDROID_API"
         )
     else
         echo "Unknown target"
