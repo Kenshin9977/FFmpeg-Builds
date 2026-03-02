@@ -10,6 +10,7 @@ package_variant() {
 
     mkdir -p "$OUT"/lib/pkgconfig
     cp -a "$IN"/lib/*.so* "$OUT"/lib/
+    cp -a "${NDK_TOOLCHAIN}/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so" "$OUT"/lib/
     cp -a "$IN"/lib/pkgconfig/*.pc "$OUT"/lib/pkgconfig/
     sed -i \
         -e 's|^prefix=.*|prefix=${pcfiledir}/../..|' \
