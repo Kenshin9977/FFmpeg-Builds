@@ -10,7 +10,7 @@ package_variant() {
 
     mkdir -p "$OUT"/lib/pkgconfig
     cp -a "$IN"/lib/*.so* "$OUT"/lib/
-    cp -a "${NDK_TOOLCHAIN}/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so" "$OUT"/lib/
+    docker run --rm "$IMAGE" sh -c 'cat $NDK_TOOLCHAIN/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so' > "$OUT"/lib/libc++_shared.so
     cp -a "$IN"/lib/pkgconfig/*.pc "$OUT"/lib/pkgconfig/
     sed -i \
         -e 's|^prefix=.*|prefix=${pcfiledir}/../..|' \
