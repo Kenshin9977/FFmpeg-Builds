@@ -13,6 +13,7 @@ This repository provides static Windows (x86 and x86_64) and Linux (x86_64, arm6
 [![Windows x64 GPL master](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip "Windows x64 GPL master")
 [![Windows x86 GPL master](https://img.shields.io/badge/-Windows_x86-9cf.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win32-gpl.zip "Windows x86 GPL master")
 [![Windows ARM64 GPL master](https://img.shields.io/badge/-Windows_arm64-lightblue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-winarm64-gpl.zip "Windows ARM64 GPL master")
+[![Android ARM64 GPL master](https://img.shields.io/badge/-Android_ARM64-brightgreen.svg?style=for-the-badge&logo=android)](https://github.com/Kenshin9977/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-androidarm64-gpl.tar.xz "Android ARM64 GPL master")
 [![Other variants](https://img.shields.io/badge/-Other-grey.svg?style=for-the-badge)](https://github.com/yt-dlp/FFmpeg-Builds/wiki/Latest "All variants")
 [![Other versions](https://img.shields.io/badge/-Old_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/FFmpeg-Builds/releases "All releases")
 

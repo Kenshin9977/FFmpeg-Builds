@@ -194,6 +194,8 @@ jobs:
             variant: gpl
           - target: androidarm64
             variant: gpl
+          - target: androidarm64
+            variant: gpl-shared
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
@@ -267,6 +269,8 @@ jobs:
             variant: gpl
           - target: androidarm64
             variant: gpl
+          - target: androidarm64
+            variant: gpl-shared
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
